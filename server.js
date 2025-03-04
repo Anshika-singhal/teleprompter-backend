@@ -7,8 +7,10 @@ const scriptRoutes = require("./routes/ScriptRoutes");
 
 const app = express();
 app.use(cors({
-  origin: ["http://127.0.0.1:5500/index.html", "http://localhost:5000"]
-  }));
+  origin: ["https://promptflow-teleprompter.onrender.com","http://127.0.0.1:5500/", "http://localhost:5000"]
+  },
+  {methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']}
+));
 app.use(express.json());
 
 // ✅ Serve uploaded videos statically
